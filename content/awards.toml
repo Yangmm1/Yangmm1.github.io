@@ -3,25 +3,54 @@ title = "Awards"
 description = "Honors and awards I have received."
 
 [[items]]
-title = "Example Award"
-subtitle = "Organization"
+title = "South China Normal University"
+subtitle = "First-Class Scholarship, University-level"
+date = "2025 – 2026"
+content = "Academic Excellence Award"
+
+[[items]]
+title = "RoboCon National Finals · AI Algorithm Application Track"
+subtitle = "Third Prize, National"
 date = "2025"
-content = "Description of the award."
 
 [[items]]
-title = "Example Award"
-subtitle = "Organization"
+title = "MCM/ICM (American Mathematical Contest in Modeling)"
+subtitle = "Honorable Mention, International"
+date = "2025"
+content = "Evaluation and Optimization for Sustainable Tourism, Integrating Societal, Ecological, and Economic Dimensions"
+
+[[items]]
+title = "Lanqiao Cup — Software & IT Professional Competition"
+subtitle = "Third Prize, Provincial"
+date = "2025"
+content = "Python"
+
+[[items]]
+title = "National Inspirational Scholarship"
+subtitle = "National-level"
+date = "2025"
+content = "Academic Excellence Award"
+
+[[items]]
+title = "South China Normal University"
+subtitle = "Second-Class Scholarship, University-level"
+date = "2024 – 2025"
+content = "Academic Excellence Award"
+
+[[items]]
+title = "China Undergraduate Mathematical Contest in Modeling (CUMCM)"
+subtitle = "Second Prize, Provincial"
 date = "2024"
-content = "Description of the award."
+content = "Research on Solving the Motion State Problem of Chair Handle Using the Spiral Recursion Approximation Method"
 
 [[items]]
-title = "Example Award"
-subtitle = "Organization"
-date = "2023"
-content = "Description of the award."
+title = "APMCM (Asia-Pacific Mathematical Contest in Modeling)"
+subtitle = "Third Prize, Provincial"
+date = "2024"
+content = "Underwater image enhancement scheme based on Jaffe-McGlamery model"
 
 [[items]]
-title = "Example Award"
-subtitle = "Organization"
-date = "2022"
-content = "Description of the award."
+title = "South China Normal University"
+subtitle = "Third-Class Scholarship, University-level"
+date = "2023 – 2024"
+content = "Academic Excellence Award"

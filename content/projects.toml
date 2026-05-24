@@ -1,0 +1,35 @@
+type = "card"
+title = "Projects"
+description = "Research and engineering projects."
+
+[[items]]
+title = "PhytoGraphQA: Knowledge-Graph QA System"
+subtitle = "SCNU Golden Seed Project"
+date = "2024 – 2025"
+tags = ["RAG", "LangChain", "Neo4j", "LLM Agent"]
+content = """
+- RAG AI Agent with LangChain/Neo4j: NL → Cypher → retrieval → LLM answer.
+- Prompt-based NL-to-Cypher: **90.6%** answer accuracy, **87.2%** entity recognition.
+- Improved AliNet for cross-source entity alignment, **F1 78.4%**.
+"""
+
+[[items]]
+title = "Text-to-SQL"
+subtitle = "Baidu: Artificial Intelligence Algorithm Challenge Competition"
+date = "2024 – 2025"
+tags = ["LLM", "Text2SQL", "AI Agent"]
+content = """
+- Text2SQL module for Agent database interaction (Function Call).
+- **67.9** on equivalence matching + execution accuracy.
+"""
+
+[[items]]
+title = "Foshan Lunxin Technology Co., Ltd."
+subtitle = "Research Assistant · Internship"
+date = "Jul 2025 – Apr 2026"
+tags = ["PyTorch", "AI4Science", "LLM", "EDA", "React"]
+content = """
+- **AI4Science:** Angle-aware deep potential (PyTorch); energy RMSE ~**40%** lower vs. DPA-1; code open-sourced.
+- **EDA LLM:** Fine-tuned Qwen3-32B for layout design; **+10.4%** code-generation accuracy on user datasets.
+- **Engineering:** React frontend with streaming LLM API integration.
+"""

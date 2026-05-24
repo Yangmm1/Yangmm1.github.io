@@ -3,25 +3,55 @@ title = "奖项"
 description = "我获得的荣誉与奖项。"
 
 [[items]]
-title = "示例奖项"
-subtitle = "颁发机构"
+title = "华南师范大学"
+subtitle = "一等奖学金，校级"
+date = "2025 – 2026"
+content = "学业优秀奖"
+
+
+[[items]]
+title = "RoboCon 全国总决赛 · 人工智能算法应用赛道"
+subtitle = "三等奖，国家级"
 date = "2025"
-content = "奖项说明。"
 
 [[items]]
-title = "示例奖项"
-subtitle = "颁发机构"
+title = "美国大学生数学建模竞赛（MCM/ICM）"
+subtitle = "全国荣誉奖，国际级"
+date = "2025"
+content = "基于AHP的可持续旅游评估优化方案，解决过度旅游多维平衡问题"
+
+[[items]]
+title = "蓝桥杯全国软件和信息技术专业人才大赛"
+subtitle = "三等奖，省级"
+date = "2025"
+content = "Python"
+
+[[items]]
+title = "国家励志奖学金"
+subtitle = "国家级"
+date = "2025"
+content = "学业优秀奖"
+
+[[items]]
+title = "华南师范大学"
+subtitle = "二等奖学金，校级"
+date = "2024 – 2025"
+content = "学业优秀奖"
+
+[[items]]
+title = "全国大学生数学建模竞赛"
+subtitle = "二等奖，省级"
 date = "2024"
-content = "奖项说明。"
+content = "基于螺线递推逼近方法求解板凳龙把手运动状态问题研究"
 
 [[items]]
-title = "示例奖项"
-subtitle = "颁发机构"
-date = "2023"
-content = "奖项说明。"
+title = "亚太地区大学生数学建模竞赛"
+subtitle = "三等奖，省级"
+date = "2024"
+content = "基于Jaffe-McGlamery 模型的水下图像增强方案"
 
 [[items]]
-title = "示例奖项"
-subtitle = "颁发机构"
-date = "2022"
-content = "奖项说明。"
+title = "华南师范大学"
+subtitle = "三等奖学金，校级"
+date = "2023 – 2024"
+content = "学业优秀奖"

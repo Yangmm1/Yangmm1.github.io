@@ -1,0 +1,35 @@
+type = "card"
+title = "项目"
+description = "科研与工程项目经历。"
+
+[[items]]
+title = "PhytoGraphQA：基于知识图谱的问答系统"
+subtitle = "华南师范大学金种子项目"
+date = "2024 – 2025"
+tags = ["RAG", "LangChain", "Neo4j", "AI Agent"]
+content = """
+- 基于 LangChain/Neo4j 搭建 RAG 式 AI Agent：自然语言 → Cypher → 检索 → 答案生成。
+- Prompt 优化 NL 转 Cypher：答案准确率 **90.6%**，实体识别 **87.2%**。
+- 改进 AliNet 实现跨源实体对齐，**F1 78.4%**。
+"""
+
+[[items]]
+title = "Text-to-SQL"
+subtitle = "百度：人工智能算法挑战赛"
+date = "2024 – 2025"
+tags = ["LLM", "Text2SQL", "AI Agent"]
+content = """
+- 构建 Text2SQL 模块，支持 Agent 数据库交互（Function Call）。
+- 「等价匹配 + 执行准确率」综合评估 **67.9**。
+"""
+
+[[items]]
+title = "佛山论芯科技有限公司"
+subtitle = "研究助理 · 实习项目"
+date = "2025.7 – 2026.4"
+tags = ["PyTorch", "AI4Science", "大模型", "EDA", "React"]
+content = """
+- **AI4Science：** 基于 PyTorch 的角度感知深度势能模型，能量预测 RMSE 较 DPA-1 降低约 **40%**，代码已开源。
+- **EDA 应用：** 基于 EDA 工具微调 Qwen3-32B 布局框架，用户数据集代码生成准确率 +**10.4%**。
+- **工程交付：** 开发 React 前端并对接 LLM API，实现实时流式推理。
+"""

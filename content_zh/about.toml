@@ -3,9 +3,10 @@ title = "关于我"
 
 [profile]
 research_interests = [
-  "计算物理",
-  "数学原理",
-  "定理证明"
+  "大模型应用工程化",
+  "AI 智能体",
+  "检索增强生成（RAG）与 MoE",
+  "知识图谱问答"
 ]
 
 [[sections]]

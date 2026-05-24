@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
     EnvelopeIcon,
     AcademicCapIcon,
@@ -11,7 +12,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
-import { Github, Linkedin, Pin } from 'lucide-react';
+import { Github, Linkedin, Pin, FileText } from 'lucide-react';
 import type { SiteConfig } from '@/lib/config';
 import { useMessages } from '@/lib/i18n/useMessages';
 
@@ -101,6 +102,12 @@ export default function Profile({ author, social, features, researchInterests }:
             name: 'LinkedIn',
             href: social.linkedin,
             icon: Linkedin,
+        }] : []),
+        ...(social.cv ? [{
+            name: messages.profile.cv,
+            href: social.cv,
+            icon: FileText,
+            isInternal: true,
         }] : []),
     ];
 
@@ -286,6 +293,19 @@ export default function Profile({ author, social, features, researchInterests }:
                                     )}
                                 </AnimatePresence>
                             </div>
+                        );
+                    }
+                    if ('isInternal' in link && link.isInternal) {
+                        return (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                prefetch={true}
+                                className="p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
+                                aria-label={link.name}
+                            >
+                                <IconComponent className="h-5 w-5" />
+                            </Link>
                         );
                     }
                     return (

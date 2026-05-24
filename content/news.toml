@@ -1,7 +1,15 @@
 [[news]]
-date = "2025-11"
-content = "Our work has been accepted by a prestigious journal 🎉"
+date = "2026-03"
+content = "Our paper on Angular and Shell-aware Deep Potential Energy Model for Molecular Dynamics was submitted to UAI 2026"
 
 [[news]]
-date = "2025-09"
-content = "Starting my PhD at the University of Example"
+date = "2025-07"
+content = "Started as Research Assistant at Foshan Lunxin Technology Co., Ltd."
+
+[[news]]
+date = "2025-04"
+content = "One paper (MiDream) accepted by IJCNN 2025"
+
+[[news]]
+date = "2024-12"
+content = "One paper(ELF) accepted by ACM JDIQ"
