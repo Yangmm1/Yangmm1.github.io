@@ -1,5 +1,6 @@
 import { getConfig } from '@/lib/config';
 import { getMarkdownContent, getBibtexContent, getTomlContent, getPageConfig } from '@/lib/content';
+import { getCvPageContent } from '@/lib/cvContent';
 import { parseBibTeX } from '@/lib/bibtexParser';
 import HomePageClient, { type HomePageLocaleData } from '@/components/home/HomePageClient';
 import { Publication } from '@/types/publication';
@@ -100,11 +101,15 @@ function loadPageDataForLocale(locale: string | undefined): HomePageLocaleData {
 
         if (pageConfig.type === 'text') {
           const textConfig = pageConfig as TextPageConfig;
+          const content =
+            item.target === 'cv'
+              ? getCvPageContent(locale)
+              : getMarkdownContent(textConfig.source, locale);
           return {
             type: 'text',
             id: item.target,
             config: textConfig,
-            content: getMarkdownContent(textConfig.source, locale),
+            content,
           } as PageData;
         }
 

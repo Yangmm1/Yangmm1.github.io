@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getPageConfig, getMarkdownContent, getBibtexContent } from '@/lib/content';
+import { getCvPageContent } from '@/lib/cvContent';
 import { getConfig } from '@/lib/config';
 import { parseBibTeX } from '@/lib/bibtexParser';
 import DynamicPageClient, { type DynamicPageLocaleData } from '@/components/pages/DynamicPageClient';
@@ -32,7 +33,10 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
 
   if (pageConfig.type === 'text') {
     const textConfig = pageConfig as TextPageConfig;
-    const content = getMarkdownContent(textConfig.source, locale);
+    const content =
+      slug === 'cv'
+        ? getCvPageContent(locale)
+        : getMarkdownContent(textConfig.source, locale);
     return {
       type: 'text',
       config: textConfig,

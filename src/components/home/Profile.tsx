@@ -8,9 +8,14 @@ import {
     EnvelopeIcon,
     AcademicCapIcon,
     HeartIcon,
-    MapPinIcon
+    MapPinIcon,
+    PhoneIcon,
 } from '@heroicons/react/24/outline';
-import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
+import {
+    MapPinIcon as MapPinSolidIcon,
+    EnvelopeIcon as EnvelopeSolidIcon,
+    PhoneIcon as PhoneSolidIcon,
+} from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
 import { Github, Linkedin, Pin, FileText } from 'lucide-react';
 import type { SiteConfig } from '@/lib/config';
@@ -44,7 +49,11 @@ export default function Profile({ author, social, features, researchInterests }:
     const [isAddressPinned, setIsAddressPinned] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
-    const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
+    const [showPhone, setShowPhone] = useState(false);
+    const [isPhonePinned, setIsPhonePinned] = useState(false);
+    const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'phone' | 'address' | null>(null);
+
+    const phoneDigits = social.phone_wechat?.replace(/[^\d+]/g, '') ?? '';
 
     // Check local storage for user's like status
     useEffect(() => {
@@ -76,6 +85,12 @@ export default function Profile({ author, social, features, researchInterests }:
             href: `mailto:${social.email}`,
             icon: EnvelopeIcon,
             isEmail: true,
+        }] : []),
+        ...(social.phone_wechat ? [{
+            name: messages.profile.phoneWeChat,
+            href: phoneDigits ? `tel:${phoneDigits}` : '#',
+            icon: PhoneIcon,
+            isPhone: true,
         }] : []),
         ...(social.location || social.location_details ? [{
             name: messages.profile.location,
@@ -216,6 +231,77 @@ export default function Profile({ author, social, features, researchInterests }:
                                                     )}
                                                 </div>
 
+                                            </div>
+                                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        );
+                    }
+                    if ('isPhone' in link && link.isPhone) {
+                        return (
+                            <div key={link.name} className="relative">
+                                <button
+                                    onMouseEnter={() => {
+                                        if (!isPhonePinned) setShowPhone(true);
+                                        setLastClickedTooltip('phone');
+                                    }}
+                                    onMouseLeave={() => !isPhonePinned && setShowPhone(false)}
+                                    onClick={() => {
+                                        setIsPhonePinned(!isPhonePinned);
+                                        setShowPhone(!isPhonePinned);
+                                        setLastClickedTooltip('phone');
+                                    }}
+                                    className={`p-2 sm:p-2 transition-colors duration-200 ${isPhonePinned
+                                        ? 'text-accent'
+                                        : 'text-neutral-600 dark:text-neutral-400 hover:text-accent'
+                                        }`}
+                                    aria-label={link.name}
+                                >
+                                    {isPhonePinned ? (
+                                        <PhoneSolidIcon className="h-5 w-5" />
+                                    ) : (
+                                        <PhoneIcon className="h-5 w-5" />
+                                    )}
+                                </button>
+
+                                <AnimatePresence>
+                                    {(showPhone || isPhonePinned) && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10, scale: 0.8 }}
+                                            animate={{ opacity: 1, y: -10, scale: 1 }}
+                                            exit={{ opacity: 0, y: -20, scale: 0.8 }}
+                                            className={`absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-neutral-800 text-white px-4 py-3 rounded-lg text-sm font-medium shadow-lg max-w-[calc(100vw-2rem)] sm:max-w-none sm:whitespace-nowrap ${lastClickedTooltip === 'phone' ? 'z-20' : 'z-10'
+                                                }`}
+                                            onMouseEnter={() => {
+                                                if (!isPhonePinned) setShowPhone(true);
+                                                setLastClickedTooltip('phone');
+                                            }}
+                                            onMouseLeave={() => !isPhonePinned && setShowPhone(false)}
+                                        >
+                                            <div className="text-center">
+                                                <div className="flex items-center justify-center space-x-2 mb-1">
+                                                    <p className="font-semibold">{messages.profile.phoneWeChat}</p>
+                                                    {!isPhonePinned && (
+                                                        <div className="flex items-center space-x-0.5 text-xs text-neutral-400 opacity-60">
+                                                            <Pin className="h-2.5 w-2.5" />
+                                                            <span className="hidden sm:inline">{messages.profile.click}</span>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                <p className="break-words">{social.phone_wechat}</p>
+                                                {phoneDigits && (
+                                                    <div className="mt-2">
+                                                        <a
+                                                            href={link.href}
+                                                            className="inline-flex items-center justify-center space-x-2 bg-accent hover:bg-accent-dark text-white px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200 w-full sm:w-auto"
+                                                        >
+                                                            <PhoneIcon className="h-4 w-4" />
+                                                            <span>{messages.profile.call}</span>
+                                                        </a>
+                                                    </div>
+                                                )}
                                             </div>
                                             <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-800"></div>
                                         </motion.div>
