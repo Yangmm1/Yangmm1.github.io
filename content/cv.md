@@ -50,9 +50,9 @@ Baidu: Artificial Intelligence Algorithm Challenge Competition ·|· *2024 – 2
 
 Personal Project ·|· *Jul 2026*
 
-- Self-built interactive platform for stepwise visualization of Agent algorithms (PPO, MADDPG, A2A) and multi-agent protocols.
+- Self-built interactive platform for stepwise visualization of **Agent algorithms (PPO, MADDPG, A2A) and multi-agent protocols**.
 - Full-stack engineering: step playback engine, **Agent Card / JSON-RPC** demo modules.
-- [Live Demo](https://eaca-183-61-117-70.ngrok-free.app/)
+- [Live Demo](https://agent-algorithm.onrender.com/)
 
 
 ## Skills
