@@ -254,22 +254,17 @@ body {
   border-color: rgba(148, 163, 184, 0.24);
 }
 
-/* Mobile CV: fit entire resume on one screen without scrolling */
+/* Mobile CV: fit width to screen, allow vertical scrolling */
 @media (max-width: 768px) {
-  body[data-cv-mobile-fit="true"] footer {
-    display: none;
+  .cv-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
-  body[data-cv-mobile-fit="true"] main {
-    min-height: auto;
-    height: calc(100dvh - 4rem);
-    padding-top: 4rem;
-    padding-bottom: 0;
-    overflow: hidden;
-  }
-
-  body[data-cv-mobile-fit="true"] .cv-page {
-    padding: 0;
-    height: 100%;
+  .cv-page a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 }

@@ -42,9 +42,11 @@ function CvRowLayout({
     compact?: boolean;
 }) {
     return (
-        <div className={`flex w-full justify-between items-baseline ${compact ? "gap-2" : "gap-4"} ${className}`}>
-            <span className={`min-w-0 flex-1 ${compact ? "pr-2" : "pr-4"}`}>{left}</span>
-            <span className={`text-right shrink-0 ${compact ? "text-[10px] whitespace-normal" : "whitespace-nowrap"}`}>{right}</span>
+        <div
+            className={`flex w-full min-w-0 ${compact ? "flex-wrap justify-between items-baseline gap-x-2 gap-y-0.5" : "justify-between items-baseline gap-4"} ${className}`}
+        >
+            <span className={`min-w-0 ${compact ? "flex-1 basis-[60%]" : "flex-1 pr-4"}`}>{left}</span>
+            <span className={`text-right ${compact ? "text-xs whitespace-normal shrink-0" : "shrink-0 whitespace-nowrap"}`}>{right}</span>
         </div>
     );
 }
@@ -52,9 +54,9 @@ function CvRowLayout({
 function CvRowParagraph({ children, compact = false }: { children?: React.ReactNode; compact?: boolean }) {
     const split = splitCvRow(children);
     if (!split) {
-        return <p className={compact ? "mb-1 last:mb-0" : "mb-4 last:mb-0"}>{children}</p>;
+        return <p className={compact ? "mb-2 last:mb-0" : "mb-4 last:mb-0"}>{children}</p>;
     }
-    return <CvRowLayout left={split.left} right={split.right} className="mb-0.5" compact={compact} />;
+    return <CvRowLayout left={split.left} right={split.right} className="mb-1" compact={compact} />;
 }
 
 function CvRowListItem({ children, compact = false }: { children?: React.ReactNode; compact?: boolean }) {
@@ -82,7 +84,7 @@ export default function TextPage({ config, content, embedded = false, mobileAdap
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className={embedded ? "" : isCompact ? "mx-auto" : "max-w-3xl mx-auto"}
+            className={embedded ? "" : isCompact ? "mx-auto w-full min-w-0 max-w-full" : "max-w-3xl mx-auto"}
         >
             {!isCompact && (
                 <h1 className={`${embedded ? "text-2xl" : "text-4xl"} font-serif font-bold text-primary mb-4`}>{config.title}</h1>
@@ -92,27 +94,27 @@ export default function TextPage({ config, content, embedded = false, mobileAdap
                     {config.description}
                 </p>
             )}
-            <div className={`text-neutral-700 dark:text-neutral-600 ${isCompact ? "text-[11px] leading-snug" : "leading-relaxed"}`}>
+            <div className={`text-neutral-700 dark:text-neutral-600 ${isCompact ? "text-sm leading-relaxed break-words" : "leading-relaxed"}`}>
                 <ReactMarkdown
                     components={{
                         h1: ({ children }) => (
-                            <h1 className={`font-serif font-bold text-primary ${isCompact ? "text-sm mt-3 mb-1" : "text-3xl mt-8 mb-4"}`}>{children}</h1>
+                            <h1 className={`font-serif font-bold text-primary ${isCompact ? "text-base mt-4 mb-2" : "text-3xl mt-8 mb-4"}`}>{children}</h1>
                         ),
                         h2: ({ children }) => (
-                            <h2 className={`font-serif font-bold text-primary border-b border-neutral-200 dark:border-neutral-800 ${isCompact ? "text-xs mt-2.5 mb-1 pb-0.5" : "text-2xl mt-8 mb-4 pb-2"}`}>{children}</h2>
+                            <h2 className={`font-serif font-bold text-primary border-b border-neutral-200 dark:border-neutral-800 ${isCompact ? "text-base mt-5 mb-2 pb-1" : "text-2xl mt-8 mb-4 pb-2"}`}>{children}</h2>
                         ),
                         h3: ({ children }) => (
-                            <h3 className={`font-semibold text-primary ${isCompact ? "text-[11px] mt-1.5 mb-0.5" : "text-xl mt-6 mb-3"}`}>{children}</h3>
+                            <h3 className={`font-semibold text-primary ${isCompact ? "text-sm mt-3 mb-1" : "text-xl mt-6 mb-3"}`}>{children}</h3>
                         ),
                         p: ({ children }) => <CvRowParagraph compact={isCompact}>{children}</CvRowParagraph>,
                         ul: ({ children }) => (
-                            <ul className={`list-disc list-outside ml-4 pl-0.5 ${isCompact ? "mb-1 space-y-0" : "mb-4 space-y-1 ml-5 pl-1"}`}>{children}</ul>
+                            <ul className={`list-disc list-outside ${isCompact ? "mb-2 space-y-0.5 ml-4 pl-0.5" : "mb-4 space-y-1 ml-5 pl-1"}`}>{children}</ul>
                         ),
                         ol: ({ children }) => (
-                            <ol className={`list-decimal list-outside ml-4 pl-0.5 ${isCompact ? "mb-1 space-y-0" : "mb-4 space-y-1 ml-5 pl-1"}`}>{children}</ol>
+                            <ol className={`list-decimal list-outside ${isCompact ? "mb-2 space-y-0.5 ml-4 pl-0.5" : "mb-4 space-y-1 ml-5 pl-1"}`}>{children}</ol>
                         ),
                         li: ({ children }) => (
-                            <li className={isCompact ? "mb-0" : "mb-1"}>
+                            <li className={isCompact ? "mb-0.5" : "mb-1"}>
                                 <CvRowListItem compact={isCompact}>{children}</CvRowListItem>
                             </li>
                         ),

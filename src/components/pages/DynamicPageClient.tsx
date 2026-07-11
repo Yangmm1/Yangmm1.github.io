@@ -2,7 +2,6 @@
 
 import PublicationsList from '@/components/publications/PublicationsList';
 import TextPage from '@/components/pages/TextPage';
-import CvMobileFit from '@/components/pages/CvMobileFit';
 import CardPage from '@/components/pages/CardPage';
 import { Publication } from '@/types/publication';
 import {
@@ -35,14 +34,16 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale, slug }:
   const isCvPage = slug === 'cv';
 
   return (
-    <div className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12${isCvPage ? ' cv-page' : ''}`}>
+    <div
+      className={`max-w-4xl mx-auto ${
+        isCvPage ? 'cv-page px-3 py-6 sm:px-6 sm:py-12' : 'px-4 py-12 sm:px-6 lg:px-8'
+      }`}
+    >
       {pageData.type === 'publication' && (
         <PublicationsList config={pageData.config} publications={pageData.publications} />
       )}
       {pageData.type === 'text' && isCvPage && (
-        <CvMobileFit>
-          <TextPage config={pageData.config} content={pageData.content} mobileAdapt />
-        </CvMobileFit>
+        <TextPage config={pageData.config} content={pageData.content} mobileAdapt />
       )}
       {pageData.type === 'text' && !isCvPage && (
         <TextPage config={pageData.config} content={pageData.content} />
