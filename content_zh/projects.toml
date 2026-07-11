@@ -26,7 +26,7 @@ content = """
 [[items]]
 title = "佛山论芯科技有限公司"
 subtitle = "研究助理 · 实习项目"
-date = "2025.7 – 2026.4"
+date = "2025.7 – 至今"
 tags = ["PyTorch", "AI4Science", "大模型", "EDA", "React"]
 content = """
 - **AI4Science：** 基于 PyTorch 的角度感知深度势能模型，能量预测 RMSE 较 DPA-1 降低约 **40%**，代码已开源。
