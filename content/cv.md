@@ -2,7 +2,7 @@
 
 **South China Normal University**, B.E. in Artificial Intelligence, *Sep 2022 – Jun 2026 (Expected)*
 
-- GPA: 86.6/100
+- GPA: 87.3/100
 
 ## Internship
 
