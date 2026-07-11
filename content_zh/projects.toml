@@ -33,3 +33,14 @@ content = """
 - **EDA 应用：** 基于 EDA 工具微调 Qwen3-32B 布局框架，用户数据集代码生成准确率 +**10.4%**。
 - **工程交付：** 开发 React 前端并对接 LLM API，实现实时流式推理。
 """
+
+[[items]]
+title = "交互式算法学习平台（自研）"
+subtitle = "个人项目"
+date = "2026.7"
+tags = ["Agent 算法", "多智能体", "Web 工程", "React"]
+content = """
+- 自研交互式 Web 平台，以代码 + 可视化分步讲解 PPO、MADDPG、A2A 等 Agent 算法及多智能体通信协议。
+- 独立完成前后端与步进播放引擎，实现 Agent Card / JSON-RPC 等协议演示模块。
+- [在线演示](https://eaca-183-61-117-70.ngrok-free.app/)
+"""

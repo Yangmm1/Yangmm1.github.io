@@ -46,6 +46,14 @@ Baidu: Artificial Intelligence Algorithm Challenge Competition ·|· *2024 – 2
 - Text2SQL module for Agent database interaction (Function Call).
 - **67.9** on equivalence matching + execution accuracy.
 
+**Interactive Algorithm Learning Platform (Self-developed)**
+
+Personal Project ·|· *Jul 2026*
+
+- Self-built interactive platform for stepwise visualization of Agent algorithms (PPO, MADDPG, A2A) and multi-agent protocols.
+- Full-stack engineering: step playback engine, Agent Card / JSON-RPC demo modules.
+- [Live Demo](https://eaca-183-61-117-70.ngrok-free.app/)
+
 
 ## Skills
 
