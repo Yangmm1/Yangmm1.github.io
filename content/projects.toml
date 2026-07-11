@@ -41,6 +41,6 @@ date = "Jul 2026"
 tags = ["Agent Algorithms", "Multi-Agent", "Web Engineering", "React"]
 content = """
 - Self-built interactive platform for stepwise visualization of Agent algorithms (PPO, MADDPG, A2A) and multi-agent protocols.
-- Full-stack engineering: step playback engine, Agent Card / JSON-RPC demo modules.
+- Full-stack engineering: step playback engine, **Agent Card / JSON-RPC** demo modules.
 - [Live Demo](https://eaca-183-61-117-70.ngrok-free.app/)
 """

@@ -40,7 +40,7 @@ subtitle = "个人项目"
 date = "2026.7"
 tags = ["Agent 算法", "多智能体", "Web 工程", "React"]
 content = """
-- 自研交互式 Web 平台，以代码 + 可视化分步讲解 PPO、MADDPG、A2A 等 Agent 算法及多智能体通信协议。
-- 独立完成前后端与步进播放引擎，实现 Agent Card / JSON-RPC 等协议演示模块。
+- 自研交互式 Web 平台，以代码 + 可视化分步讲解 **PPO、MADDPG、A2A 等 Agent 算法**及多智能体通信协议。
+- 独立完成前后端与步进播放引擎，实现 **Agent Card / JSON-RPC** 等协议演示模块。
 - [在线演示](https://eaca-183-61-117-70.ngrok-free.app/)
 """
