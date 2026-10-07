@@ -48,11 +48,23 @@ Baidu: Artificial Intelligence Algorithm Challenge Competition ·|· *2024 – 2
 
 **Interactive Algorithm Learning Platform (Self-developed)**
 
-Personal Project ·|· *Jul 2026*
+Independent Development·|· *Jul 2026*
 
 - Self-built interactive platform for stepwise visualization of **Agent algorithms (PPO, MADDPG, A2A) and multi-agent protocols**.
 - Full-stack engineering: step playback engine, **Agent Card / JSON-RPC** demo modules.
 - [Live Demo](https://agent-algorithm.onrender.com/)
+
+**AI Study-Abroad Application Assistant**
+
+Independent Product Development ·|· *2026*
+- Designed and developed an **MVP** of an AI study-abroad application assistant to address fragmented school/advisor screening, material preparation, and application workflows.
+- Built on **a Feishu (Lark) conversational interface**, covering user requirement collection, school/advisor screening, resume and statement assistance, application-process mapping, and interview support.
+
+**WeChat Official Account Auto-Operation Tool**
+
+Independent Development
+- Independently developed an automation tool for repetitive content processing and publishing in WeChat Official Account operations, covering **requirement analysis, functional design, and implementation**.
+- Automated content processing, generation, and publishing; currently running stably.
 
 
 ## Skills
