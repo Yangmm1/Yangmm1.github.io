@@ -58,7 +58,7 @@ content = """
 [[items]]
 title = "WeChat Official Account Auto-Operation Tool"
 subtitle = "Independent Development"
-date = ""
+date = "2026"
 tags = ["Automation", "Content Generation", "Independent Development"]
 content = """
 - Independently developed an automation tool for repetitive content processing and publishing in WeChat Official Account operations, covering **requirement analysis, functional design, and implementation**.

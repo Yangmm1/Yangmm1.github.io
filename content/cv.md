@@ -62,7 +62,7 @@ Independent Product Development ·|· *2026*
 
 **WeChat Official Account Auto-Operation Tool**
 
-Independent Development
+Independent Development ·|· *2026*
 - Independently developed an automation tool for repetitive content processing and publishing in WeChat Official Account operations, covering **requirement analysis, functional design, and implementation**.
 - Automated content processing, generation, and publishing; currently running stably.
 
